@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --base-color: #fafafa;
+  --text-color: #7e7b7b;
+  --button-color: #bdbdbd;
+}
+
+body {
+  background-color: var(--base-color);
+  overflow: hidden;
+}
+
+main.container-main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container-item {
+  /* flex: 1; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-item .title {
+  font-family: "Press Start 2P", sans-serif, cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--text-color);
+  text-align: center;
+  margin: 4rem 0 2rem;
+}
+
+.container-item .title img {
+  margin-top: 1rem;
+}
+
+/* IMAGENS POSITION */
+.container-item .imagens {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#id-img .img-bg {
+  height: 9rem;
+}
+/* score level */
+.score-level {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 0.3rem dashed var(--text-color);
+  padding: 1rem 0;
+}
+.score-level .score-main .score,
+.score-level .level-main .level {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+
+.container-item .imagens .img-dino {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 6rem;
+}
+
+.container-item .imagens .img-cactus {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  bottom: 0.38rem;
+  left: 14rem;
+}
+/* BUTTON */
+.container-item .btn {
+  font-family: "Press Start 2P", sans-serif, cursive;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1.2rem;
+  text-transform: capitalize;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+  border: none;
+  box-shadow: 4px 5px 15px 6px var(--button-color);
+  transition: 0.3s;
+}
+.container-item .btn:hover {
+  filter: brightness(0.8);
+  transition: 0.3s;
+  color: #666;
+}
+
+.dino {
+  width: 3.75rem;
+  height: 3.75rem;
+  background-image: url(/assets/dino.png);
+  position: absolute;
+  bottom: -1rem;
+  left: 2rem;
+}
+
+.cactus {
+  position: absolute;
+  width: 3.75rem;
+  height: 3.75rem;
+  background-image: url(/assets/cactus.png);
+  bottom: 0.6rem;
+}
+
+@keyframes sliderigth {
+  from {
+    background-position: 80000%;
+  }
+  to {
+    background-position: 0;
+  }
+}
+
+.container {
+  position: absolute;
+  bottom: 2rem;
+  background-image: url(/assets/background.png);
+  background-repeat: repeat-x;
+  animation: sliderigth 600s infinite linear;
+  width: 100%;
+  height: 12.5rem;
+}
+.game-over {
+  text-align: center;
+  color: var(--text-color);
+  margin-top: 1rem;
+  font-family: "Press Start 2P", sans-serif, cursive;
+  font-weight: 400;
+  font-size: 4rem;
+}

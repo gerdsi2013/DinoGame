@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- f -->
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dino | Game</title>
+  </head>
+  <body>
+    <main class="container-main">
+      <section class="container-item">
+        <div class="title">
+          <h1>Dino Game</h1>
+
+          <div class="score-level">
+            <div class="score-main">
+              <h4>score</h4>
+              <p class="score">0</p>
+            </div>
+
+            <div class="level-main">
+              <h4>Level</h4>
+              <p class="level">0</p>
+            </div>
+          </div>
+        </div>
+        <div id="id-img" class="imagens">
+          <img class="img-dino" src="/assets/dino.png" alt="dino" />
+          <img class="img-bg" src="/assets/background.png" alt="background" />
+          <img class="img-cactus" src="/assets/cactus.png" alt="cactus" />
+        </div>
+
+        <button class="btn">Start</button>
+      </section>
+
+      <div class="game-over"></div>
+      <div class="show-container">
+        <div class="show-cactus"></div>
+        <div class="show-container"></div>
+        <div class="show-dino"></div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
